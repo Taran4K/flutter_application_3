@@ -6,14 +6,12 @@ class UserEntity{
   final String login;
   final String password;
   final RoleEnum idRole;
-  final Sotrudnik idsotrudnik;
 
   UserEntity(
     {
-      required this.id,
+      this.id=0,
       required this.login,
       this.password='',
       required this.idRole,
-      required this.idsotrudnik
   });
 }

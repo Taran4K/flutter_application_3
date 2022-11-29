@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_application_3/data/model/doljnost.dart';
+import 'package:flutter_application_3/data/model/user.dart';
 import 'package:flutter_application_3/domain/entity/sotrudnik_entity.dart';
 
 class Sotrudnik extends SotrudnikEntity {
@@ -10,6 +11,7 @@ class Sotrudnik extends SotrudnikEntity {
     required super.otchestvo,
     required super.age,
     required super.idDoljnost,
+    required super.idUser,
   });
 
   Map<String, dynamic> toMap(){
@@ -19,6 +21,7 @@ class Sotrudnik extends SotrudnikEntity {
       'otchestvo':otchestvo,
       'age':age,
       'id_doljnost':idDoljnost.id,
+      'id_user':idUser.id,
     };
   }
 
@@ -30,6 +33,7 @@ class Sotrudnik extends SotrudnikEntity {
        otchestvo: json['otchestvo'], 
        age: json['naageme'], 
        idDoljnost: Doljnost.toFromMap(json),
+       idUser: User.toFromMap(json),
        );
   }
 }
